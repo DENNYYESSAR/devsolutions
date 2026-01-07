@@ -1,9 +1,13 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import { useTheme } from '../ThemeContext';
 import ParticleNetwork from './ParticleNetwork';
 
 const Scene = () => {
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
+
     return (
         <div className="absolute inset-0 -z-10 h-full w-full">
             <Canvas
@@ -12,8 +16,8 @@ const Scene = () => {
                 gl={{ antialias: true, alpha: true }}
             >
                 <Suspense fallback={null}>
-                    {/* Ambient light for general visibility */}
-                    <ambientLight intensity={0.5} />
+                    {/* Ambient light for general visibility - middle ground in dark mode */}
+                    <ambientLight intensity={isDark ? 0.45 : 0.6} />
 
                     {/* The main particle effect */}
                     <ParticleNetwork count={250} />
@@ -24,7 +28,7 @@ const Scene = () => {
                         enablePan={false}
                         enableRotate={true}
                         autoRotate={true}
-                        autoRotateSpeed={0.5}
+                        autoRotateSpeed={isDark ? 0.4 : 0.6}
                     />
                 </Suspense>
             </Canvas>

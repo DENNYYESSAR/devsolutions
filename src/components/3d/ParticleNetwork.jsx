@@ -1,8 +1,18 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
+import { useTheme } from '../ThemeContext';
 import * as THREE from 'three';
 
-const ParticleNetwork = ({ count = 100, color = '#22d3ee' }) => {
+const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
+    const { theme } = useTheme();
+    const isDark = theme === 'dark';
+
+    // Mute intensity in dark mode - but not too much (middle ground)
+    const color = isDark ? '#1e40af' : baseColor;
+    const opacityPoints = isDark ? 0.55 : 0.8;
+    const opacityLines = isDark ? 0.1 : 0.15;
+    const rotationMultiplier = isDark ? 0.7 : 1;
+
     // Check if we are in environment that supports Float32Array (browser always does)
     const points = useRef();
     const lines = useRef();
@@ -23,8 +33,8 @@ const ParticleNetwork = ({ count = 100, color = '#22d3ee' }) => {
     useFrame((state, delta) => {
         // Rotate the whole group slowly
         if (points.current) {
-            points.current.rotation.y += delta * 0.05;
-            points.current.rotation.x += delta * 0.02;
+            points.current.rotation.y += delta * 0.05 * rotationMultiplier;
+            points.current.rotation.x += delta * 0.02 * rotationMultiplier;
 
             if (lines.current) {
                 lines.current.rotation.y = points.current.rotation.y;
@@ -79,7 +89,7 @@ const ParticleNetwork = ({ count = 100, color = '#22d3ee' }) => {
                     color={color}
                     sizeAttenuation={true}
                     transparent={true}
-                    opacity={0.8}
+                    opacity={opacityPoints}
                     blending={THREE.AdditiveBlending}
                 />
             </points>
@@ -95,7 +105,7 @@ const ParticleNetwork = ({ count = 100, color = '#22d3ee' }) => {
                 <lineBasicMaterial
                     color={color}
                     transparent={true}
-                    opacity={0.15}
+                    opacity={opacityLines}
                     blending={THREE.AdditiveBlending}
                     depthWrite={false}
                 />
