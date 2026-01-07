@@ -45,14 +45,18 @@ const Navbar = () => {
             </a>
           </div>
 
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-4 md:hidden relative z-50">
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors ${isScrolled ? 'text-slate-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'}`}
             >
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`${isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'}`}>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`p-2 rounded-xl transition-all duration-300 ${isMenuOpen ? 'bg-blue-600 text-white shadow-lg' : isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'}`}
+              aria-label="Toggle Menu"
+            >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -61,48 +65,55 @@ const Navbar = () => {
 
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden fixed top-20 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b dark:border-slate-800 overflow-hidden"
-          >
-            <div className="flex flex-col space-y-4 px-6 py-8">
-              {['Services', 'Technologies', 'About'].map((item) => (
-                <motion.a
-                  key={item}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  href={`#${item.toLowerCase()}`}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-2xl font-bold text-slate-900 dark:text-slate-200 hover:text-blue-600 transition-colors"
-                >
-                  {item}
-                </motion.a>
-              ))}
-              <motion.a
-                initial={{ x: -20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                href="#contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-bold text-center shadow-lg shadow-blue-500/20"
-              >
-                Get Started
-              </motion.a>
+          <>
+            {/* Backdrop Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="md:hidden fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-sm"
+              onClick={() => setIsMenuOpen(false)}
+            />
 
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="pt-6 border-t dark:border-slate-800 flex justify-center space-x-6"
-              >
-                <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors"><Github className="w-6 h-6" /></a>
-                <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors"><Linkedin className="w-6 h-6" /></a>
-                <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors"><Twitter className="w-6 h-6" /></a>
-              </motion.div>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-100%", opacity: 0 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="md:hidden fixed top-0 left-0 right-0 z-40 bg-white dark:bg-slate-900 shadow-2xl rounded-b-[2.5rem] overflow-hidden border-b border-slate-100 dark:border-slate-800"
+            >
+              <div className="flex flex-col space-y-3 px-6 pb-12 pt-24 text-center">
+                {['Home', 'Services', 'Technologies', 'About'].map((item, idx) => (
+                  <motion.a
+                    key={item}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.1 * idx }}
+                    href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-3xl font-extrabold text-slate-900 dark:text-white hover:text-blue-600 transition-all py-2"
+                  >
+                    {item}
+                  </motion.a>
+                ))}
+
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="pt-6"
+                >
+                  <a
+                    href="#contact"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3.5 rounded-2xl font-bold text-lg shadow-xl shadow-blue-500/30"
+                  >
+                    Get Started
+                  </a>
+                </motion.div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>

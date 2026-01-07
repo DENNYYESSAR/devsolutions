@@ -18,7 +18,7 @@
 
     @media (max-width: 768px) {
         .animate-marquee {
-            animation: marquee 8s linear infinite;
+            animation: marquee 25s linear infinite;
         }
     }
 
@@ -33,7 +33,7 @@
         }
 
         100% {
-            transform: translateX(-50%);
+            transform: translateX(-33.33%);
         }
     }
 }
