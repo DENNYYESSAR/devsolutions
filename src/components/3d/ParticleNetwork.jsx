@@ -11,7 +11,7 @@ const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const targetRotation = useRef({ x: 0, y: 0 });
 
-    // Track mouse movement across the entire page
+    // Track mouse and touch movement across the entire page
     useEffect(() => {
         const handleMouseMove = (event) => {
             // Normalize mouse position to -1 to 1 range
@@ -20,8 +20,24 @@ const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
             setMousePos({ x, y });
         };
 
+        const handleTouchMove = (event) => {
+            if (event.touches.length > 0) {
+                const touch = event.touches[0];
+                const x = (touch.clientX / window.innerWidth) * 2 - 1;
+                const y = (touch.clientY / window.innerHeight) * 2 - 1;
+                setMousePos({ x, y });
+            }
+        };
+
         window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
+        window.addEventListener('touchmove', handleTouchMove);
+        window.addEventListener('touchstart', handleTouchMove); // Trigger on initial touch too
+
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchstart', handleTouchMove);
+        };
     }, []);
 
     // Mute intensity in dark mode - but not too much (middle ground)
