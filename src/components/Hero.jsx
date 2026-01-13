@@ -108,7 +108,7 @@ const Hero = () => {
                         </AnimatedSection>
 
                         <AnimatedSection delay={0.6}>
-                            <div className="flex flex-wrap gap-6 md:gap-10 mt-10 pt-8 border-t border-slate-200 dark:border-slate-800">
+                            <div className="flex flex-wrap gap-6 md:gap-10 mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 max-w-lg">
                                 <div className="text-center">
                                     <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
                                     <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Projects Delivered</div>
