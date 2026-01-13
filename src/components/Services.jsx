@@ -11,45 +11,45 @@ const Services = () => {
     const services = [
         {
             icon: <Code className="w-8 h-8" />,
-            title: "Full-Stack Web Development",
-            description: "Custom web applications built with React, Next.js, Vue.js, and TypeScript. Scalable backend solutions using Node.js and Python/Flask.",
-            features: ["Responsive Design", "Modern Frameworks", "Performance Optimized"],
+            title: "Launch Faster, Convert More",
+            description: "Get a stunning website that loads instantly, works on every device, and turns visitors into customers. We handle the complexity so you can focus on your business.",
+            features: ["Mobile-First Experience", "Faster Page Loads", "Higher Conversions"],
             image: serviceWebDev
         },
         {
             icon: <Database className="w-8 h-8" />,
-            title: "Database Solutions",
-            description: "Expert database architecture and management with PostgreSQL, MySQL, and MongoDB. Optimized for performance and scalability.",
-            features: ["Data Modeling", "Query Optimization", "Migration Services"],
+            title: "Your Data, Always Accessible",
+            description: "Keep your business data safe, organized, and lightning-fast to access. Never worry about losing information or slow systems again.",
+            features: ["24/7 Data Access", "Blazing Fast Queries", "Zero Data Loss"],
             image: serviceDatabase
         },
         {
             icon: <Cloud className="w-8 h-8" />,
-            title: "Cloud & DevOps",
-            description: "Complete cloud infrastructure deployment on AWS, GCP, and Oracle Cloud. Docker containerization and CI/CD pipeline implementation.",
-            features: ["Cloud Migration", "Automated Deployments", "Infrastructure as Code"],
+            title: "Scale Without Worry",
+            description: "Grow your business without growing your IT headaches. Our cloud solutions adapt to your needs automatically—pay only for what you use.",
+            features: ["Reduce IT Costs", "Automatic Scaling", "99.9% Uptime"],
             image: serviceCloud
         },
         {
             icon: <Shield className="w-8 h-8" />,
-            title: "Cybersecurity & Pentesting",
-            description: "Comprehensive security assessments and vulnerability testing. Protect your applications with industry-standard security practices.",
-            features: ["Vulnerability Scanning", "Security Audits", "Compliance Testing"],
+            title: "Protect What Matters Most",
+            description: "Shield your customers' data and your reputation from cyber threats. Sleep better knowing your business is protected by enterprise-grade security.",
+            features: ["Customer Data Protection", "Threat Prevention", "Peace of Mind"],
             image: serviceSecurity
         },
         {
             icon: <LineChart className="w-8 h-8" />,
-            title: "AI/ML Solutions",
-            description: "Advanced Artificial Intelligence and Machine Learning solutions. Predictive analytics, NLP models, and intelligent process automation.",
-            features: ["Predictive Analytics", "NLP Integration", "Smart Automation"],
+            title: "Smarter Decisions, Faster Growth",
+            description: "Turn your data into actionable insights that drive revenue. Our AI solutions help you predict trends, automate tasks, and stay ahead of competitors.",
+            features: ["Data-Driven Insights", "Automated Workflows", "Competitive Advantage"],
             image: serviceAiMl
         },
         {
             icon: <Cog className="w-8 h-8" />,
-            title: "API Development & Automation",
-            description: "RESTful and GraphQL API design with comprehensive documentation. Custom automation scripts to streamline your workflows.",
-            features: ["API Design", "Integration Services", "Process Automation"],
-            image: serviceWebDev // Reusing web dev image as fallback
+            title: "Connect Everything, Work Smarter",
+            description: "Eliminate manual busywork by connecting all your tools seamlessly. Automate repetitive tasks and give your team more time for what matters.",
+            features: ["Save Hours Weekly", "Eliminate Errors", "Seamless Integration"],
+            image: serviceWebDev
         }
     ];
 
@@ -58,9 +58,9 @@ const Services = () => {
             <div className="max-w-screen-2xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">Our Services</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight">How We Help You Succeed</h2>
                         <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                            Comprehensive software development services tailored to your business needs, delivered with precision and excellence.
+                            Real solutions that deliver real results—save time, cut costs, and grow your business with technology that works for you.
                         </p>
                     </div>
                 </AnimatedSection>

@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, useEffect, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useTheme } from '../ThemeContext';
 import * as THREE from 'three';
@@ -6,6 +6,23 @@ import * as THREE from 'three';
 const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
     const { theme } = useTheme();
     const isDark = theme === 'dark';
+
+    // Mouse position state (normalized -1 to 1)
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const targetRotation = useRef({ x: 0, y: 0 });
+
+    // Track mouse movement across the entire page
+    useEffect(() => {
+        const handleMouseMove = (event) => {
+            // Normalize mouse position to -1 to 1 range
+            const x = (event.clientX / window.innerWidth) * 2 - 1;
+            const y = (event.clientY / window.innerHeight) * 2 - 1;
+            setMousePos({ x, y });
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, []);
 
     // Mute intensity in dark mode - but not too much (middle ground)
     const color = isDark ? '#1e40af' : baseColor;
@@ -31,10 +48,18 @@ const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
     const linePositions = useMemo(() => new Float32Array(count * count * 3), [count]);
 
     useFrame((state, delta) => {
-        // Rotate the whole group slowly
+        // Smoothly interpolate target rotation based on mouse position
+        targetRotation.current.x = mousePos.y * 0.3; // Vertical mouse movement affects X rotation
+        targetRotation.current.y = mousePos.x * 0.5; // Horizontal mouse movement affects Y rotation
+
+        // Rotate the whole group based on mouse position + slow auto-rotation
         if (points.current) {
-            points.current.rotation.y += delta * 0.05 * rotationMultiplier;
-            points.current.rotation.x += delta * 0.02 * rotationMultiplier;
+            // Smooth interpolation for fluid movement
+            points.current.rotation.x += (targetRotation.current.x - points.current.rotation.x) * 0.05;
+            points.current.rotation.y += (targetRotation.current.y - points.current.rotation.y) * 0.05;
+
+            // Add subtle continuous rotation
+            points.current.rotation.y += delta * 0.03 * rotationMultiplier;
 
             if (lines.current) {
                 lines.current.rotation.y = points.current.rotation.y;
@@ -58,6 +83,7 @@ const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
                     const dist = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2) + (z1 - z2) * (z1 - z2);
 
                     if (dist < 9) { // Distance squared < 3*3
+                        // eslint-disable-next-line react-hooks/immutability
                         linePositions[lineIdx++] = x1;
                         linePositions[lineIdx++] = y1;
                         linePositions[lineIdx++] = z1;
@@ -115,3 +141,4 @@ const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
 };
 
 export default ParticleNetwork;
+

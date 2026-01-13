@@ -27,15 +27,15 @@ const Contact = () => {
             <div className="max-w-screen-2xl mx-auto relative z-10">
                 <AnimatedSection>
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Get In Touch</h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400">Let's discuss how we can help transform your business</p>
+                        <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Let's Solve Your Challenges</h2>
+                        <p className="text-xl text-slate-600 dark:text-slate-400">Tell us what's slowing you down—we'll show you how to fix it</p>
                     </div>
                 </AnimatedSection>
 
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
                     <AnimatedSection delay={0.2} className="w-full">
                         <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700">
-                            <h3 className="text-2xl font-bold mb-8 text-slate-900 dark:text-white">Send us a message</h3>
+                            <h3 className="text-2xl font-bold mb-8 text-slate-900 dark:text-white">Start Your Free Consultation</h3>
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
@@ -144,7 +144,7 @@ const Contact = () => {
                                     <div>
                                         <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-1">Phone Number</h4>
                                         <p className="text-slate-600 dark:text-slate-400">+254 703 627-369</p>
-                                        <p className="text-slate-400 text-sm mt-1">Mon-Fri 9am-6pm EAT</p>
+                                        <p className="text-slate-400 text-sm mt-1">24/7 Availability</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-6">
@@ -162,8 +162,8 @@ const Contact = () => {
 
                         <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-8 rounded-3xl text-white shadow-xl shadow-blue-500/20 relative overflow-hidden flex-1 flex flex-col justify-center">
                             <div className="relative z-10">
-                                <h3 className="text-2xl font-bold mb-4">Ready to Start?</h3>
-                                <p className="mb-6 opacity-90 text-sm leading-relaxed">Schedule a free consultation to discuss your project requirements.</p>
+                                <h3 className="text-2xl font-bold mb-4">Your Success Starts Here</h3>
+                                <p className="mb-6 opacity-90 text-sm leading-relaxed">Get expert guidance tailored to your unique challenges—absolutely free.</p>
                                 <div className="space-y-2">
                                     <div className="flex items-center space-x-3">
                                         <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">

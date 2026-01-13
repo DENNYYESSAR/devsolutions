@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Code, Shield, Cloud, Brain } from 'lucide-react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
 import Typewriter from './Typewriter';
@@ -63,8 +64,10 @@ const Hero = () => {
                                     <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-green-400"></div>
                                 </div>
                                 <div className="space-y-1">
-                                    <p><span className="text-purple-600 font-semibold">const</span> <span className="text-blue-600">model</span> = <span className="text-amber-600">await</span> train(data);</p>
-                                    <p><span className="text-purple-600 font-semibold">await</span> <span className="text-blue-600">model</span>.predict(<span className="text-green-600">"success"</span>);</p>
+                                    <p><span className="text-slate-400">// Your success, automated</span></p>
+                                    <p><span className="text-purple-600 font-semibold">const</span> <span className="text-blue-600">growth</span> = <span className="text-amber-600">await</span> ai.optimize();</p>
+                                    <p><span className="text-blue-600">revenue</span>.<span className="text-cyan-600">boost</span>(<span className="text-green-600">"+40%"</span>);</p>
+                                    <p><span className="text-blue-600">costs</span>.<span className="text-cyan-600">reduce</span>(<span className="text-green-600">"-60%"</span>);</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -75,32 +78,49 @@ const Hero = () => {
                         <AnimatedSection>
                             <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-400 mb-6 backdrop-blur-md text-sm font-medium shadow-sm">
                                 <span className="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
-                                Future-Ready Intelligence
+                                Your Success, Powered by AI
                             </div>
 
                             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white tracking-tight">
-                                Engineering <br />
+                                Unlock Your <br />
                                 <span className="text-blue-600">
-                                    <Typewriter words={["AI & Machine Learning", "Intelligent Systems", "Cloud Architecture", "Modern Software"]} />
+                                    <Typewriter words={["Business Potential", "Competitive Edge", "Growth Strategy", "Digital Future"]} />
                                 </span>
                             </h1>
                         </AnimatedSection>
 
                         <AnimatedSection delay={0.2}>
                             <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-lg font-medium">
-                                Transforming businesses with advanced Artificial Intelligence and data-driven software solutions. We build the intelligent systems of tomorrow.
+                                Save time, reduce costs, and accelerate growth with smart technology solutions designed around your unique business needs.
                             </p>
                         </AnimatedSection>
 
                         <AnimatedSection delay={0.4}>
                             <div className="flex flex-row gap-3 md:gap-4">
                                 <a href="#contact" className="group flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold flex items-center justify-center shadow-lg shadow-blue-600/20 transition-all duration-300 text-sm md:text-base">
-                                    Start Project
+                                    Get Your Free Consultation
                                     <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </a>
                                 <a href="#services" className="flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 rounded-xl font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 text-center text-sm md:text-base">
-                                    View Work
+                                    See How We Help
                                 </a>
+                            </div>
+                        </AnimatedSection>
+
+                        <AnimatedSection delay={0.6}>
+                            <div className="flex flex-wrap gap-6 md:gap-10 mt-10 pt-8 border-t border-slate-200 dark:border-slate-800">
+                                <div className="text-center">
+                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
+                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Projects Delivered</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">98%</div>
+                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Client Satisfaction</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">24/7</div>
+                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Support Available</div>
+                                </div>
                             </div>
                         </AnimatedSection>
                     </div>

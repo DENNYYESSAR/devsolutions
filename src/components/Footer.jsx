@@ -8,13 +8,11 @@ const Footer = () => {
                 <div className="grid md:grid-cols-4 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-1">
                         <div className="flex items-center space-x-2 mb-6">
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg shadow-blue-500/20">
-                                <Code className="w-6 h-6 text-white" />
-                            </div>
+                            <img src="/logo.png" alt="DevSolutions Logo" className="w-10 h-10 object-contain" />
                             <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">DevSolutions</span>
                         </div>
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                            Innovative software solutions for modern business challenges. We build the future of digital infrastructure.
+                            Helping businesses like yours save time, cut costs, and grow faster with smart technology solutions.
                         </p>
                         <div className="flex space-x-4">
                             <a href="https://github.com/DENNYYESSAR" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-300">

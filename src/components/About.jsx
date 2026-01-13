@@ -4,12 +4,12 @@ import AnimatedSection from './AnimatedSection';
 
 const About = () => {
     const whyChooseUs = [
-        { icon: <Cpu className="w-6 h-6" />, title: "Tested Expertise", desc: "Decades of combined experience in delivering high-performance software and complex system architectures." },
-        { icon: <Globe className="w-6 h-6" />, title: "Full-Spectrum Solutions", desc: "End-to-end development services, handling everything from initial design and prototyping to deployment and maintenance." },
-        { icon: <Users className="w-6 h-6" />, title: "AI/ML Specialization", desc: "Cutting-edge capabilities in Artificial Intelligence, Machine Learning, and data analytics to drive business insights." },
-        { icon: <Zap className="w-6 h-6" />, title: "Scalable Architecture", desc: "Cloud-native infrastructure designed to scale seamlessly with your growing user base and data requirements." },
-        { icon: <Shield className="w-6 h-6" />, title: "Security-First Approach", desc: "Rigorous security standards and compliance measures integrated into every stage of the development lifecycle." },
-        { icon: <Check className="w-6 h-6" />, title: "Agile Methodology", desc: "Flexible, iterative development ensuring rapid delivery, transparency, and constant alignment with business goals." }
+        { icon: <Cpu className="w-6 h-6" />, title: "Results You Can Trust", desc: "Join hundreds of businesses who've achieved measurable growth with our proven solutions. Your success is our track record." },
+        { icon: <Globe className="w-6 h-6" />, title: "One Partner, Complete Solutions", desc: "Stop juggling multiple vendors. Get everything you need—from idea to launch to ongoing support—from a single trusted team." },
+        { icon: <Users className="w-6 h-6" />, title: "Smarter Decisions, Faster Growth", desc: "Make confident business decisions backed by AI-powered insights. Turn your data into your greatest competitive advantage." },
+        { icon: <Zap className="w-6 h-6" />, title: "Grow Without Limits", desc: "Your success shouldn't be limited by technology. Our solutions grow with you, handling any spike in demand effortlessly." },
+        { icon: <Shield className="w-6 h-6" />, title: "Your Data, Always Protected", desc: "Rest easy knowing your customers' data and your business are protected by enterprise-grade security at every level." },
+        { icon: <Check className="w-6 h-6" />, title: "On Time, On Budget, Every Time", desc: "No surprises, no hidden costs. Get transparent communication and reliable delivery that respects your timeline and budget." }
     ];
 
     return (
@@ -17,9 +17,9 @@ const About = () => {
             <div className="max-w-7xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">Why Choose Us</h2>
+                        <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">What You Get Working With Us</h2>
                         <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                            Partner with a team that combines technical excellence with strategic thinking to deliver exceptional results.
+                            Experience the difference when technology works for you, not against you. Here's what our clients love most.
                         </p>
                     </div>
                 </AnimatedSection>

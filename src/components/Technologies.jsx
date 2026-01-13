@@ -24,9 +24,6 @@ const Technologies = () => {
                 </AnimatedSection>
 
                 <div className="relative overflow-hidden">
-                    <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white dark:from-slate-900 to-transparent z-10"></div>
-                    <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white dark:from-slate-900 to-transparent z-10"></div>
-
                     <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
                         {[...technologies, ...technologies, ...technologies].map((tech, index) => (
                             <div key={index} className="px-4 flex-shrink-0 w-[300px] md:w-[350px]">

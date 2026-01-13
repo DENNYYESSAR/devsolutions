@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Code, Menu, X, Sun, Moon, Github, Linkedin, Twitter } from 'lucide-react';
 import { useTheme } from './ThemeContext';
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -19,9 +20,7 @@ const Navbar = () => {
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-4">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
-              <Code className="w-6 h-6 text-white" />
-            </div>
+            <img src="/logo.png" alt="DevSolutions Logo" className="w-10 h-10 object-contain" />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               DevSolutions
             </span>

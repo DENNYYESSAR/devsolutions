@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
 const Typewriter = ({ words, delay = 0 }) => {
@@ -17,10 +18,8 @@ const Typewriter = ({ words, delay = 0 }) => {
 
     // Typing logic
     useEffect(() => {
-        if (index >= words.length) {
-            setIndex(0);
-            return;
-        }
+        // Bounds check handled by setter logic, ensuring valid index access
+        if (index >= words.length) return;
 
         if (subIndex === words[index].length + 1 && !reverse) {
             setReverse(true);
