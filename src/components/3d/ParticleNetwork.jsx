@@ -11,6 +11,10 @@ const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const targetRotation = useRef({ x: 0, y: 0 });
 
+    // Refs for the two distinct rotation groups
+    const tiltGroup = useRef();      // Handles mouse/touch tilt interaction
+    const autoRotateGroup = useRef(); // Handles continuous rotation
+
     // Track mouse and touch movement across the entire page
     useEffect(() => {
         const handleMouseMove = (event) => {
@@ -64,24 +68,24 @@ const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
     const linePositions = useMemo(() => new Float32Array(count * count * 3), [count]);
 
     useFrame((state, delta) => {
-        // Smoothly interpolate target rotation based on mouse position
-        targetRotation.current.x = mousePos.y * 0.3; // Vertical mouse movement affects X rotation
-        targetRotation.current.y = mousePos.x * 0.5; // Horizontal mouse movement affects Y rotation
+        // 1. Handle Interactive Tilt (Outer Group)
+        targetRotation.current.x = mousePos.y * 0.5; // Increased sensitivity
+        targetRotation.current.y = mousePos.x * 0.5;
 
-        // Rotate the whole group based on mouse position + slow auto-rotation
-        if (points.current) {
-            // Smooth interpolation for fluid movement
-            points.current.rotation.x += (targetRotation.current.x - points.current.rotation.x) * 0.05;
-            points.current.rotation.y += (targetRotation.current.y - points.current.rotation.y) * 0.05;
+        if (tiltGroup.current) {
+            // Smoothly interpolate tilt
+            tiltGroup.current.rotation.x += (targetRotation.current.x - tiltGroup.current.rotation.x) * 0.05;
+            tiltGroup.current.rotation.y += (targetRotation.current.y - tiltGroup.current.rotation.y) * 0.05;
+        }
 
-            // Add subtle continuous rotation
-            points.current.rotation.y += delta * 0.03 * rotationMultiplier;
+        // 2. Handle Continuous Auto-Rotation (Inner Group)
+        if (autoRotateGroup.current) {
+            autoRotateGroup.current.rotation.y += delta * 0.05 * rotationMultiplier;
+        }
 
-            if (lines.current) {
-                lines.current.rotation.y = points.current.rotation.y;
-                lines.current.rotation.x = points.current.rotation.x;
-            }
-
+        // 3. Update Lines (Geometry logic)
+        // Note: access points.current which is inside autoRotateGroup
+        if (points.current && lines.current) {
             // Update lines
             let lineIdx = 0;
             const positions = points.current.geometry.attributes.position.array;
@@ -116,45 +120,46 @@ const ParticleNetwork = ({ count = 100, color: baseColor = '#22d3ee' }) => {
     });
 
     return (
-        <group>
-            <points ref={points}>
-                <bufferGeometry>
-                    <bufferAttribute
-                        attach="attributes-position"
-                        count={count}
-                        array={particlePositions}
-                        itemSize={3}
+        <group ref={tiltGroup}> {/* Outer group: Interactive Tilt */}
+            <group ref={autoRotateGroup}> {/* Inner group: Continuous Spin */}
+                <points ref={points}>
+                    <bufferGeometry>
+                        <bufferAttribute
+                            attach="attributes-position"
+                            count={count}
+                            array={particlePositions}
+                            itemSize={3}
+                        />
+                    </bufferGeometry>
+                    <pointsMaterial
+                        size={0.15}
+                        color={color}
+                        sizeAttenuation={true}
+                        transparent={true}
+                        opacity={opacityPoints}
+                        blending={THREE.AdditiveBlending}
                     />
-                </bufferGeometry>
-                <pointsMaterial
-                    size={0.15}
-                    color={color}
-                    sizeAttenuation={true}
-                    transparent={true}
-                    opacity={opacityPoints}
-                    blending={THREE.AdditiveBlending}
-                />
-            </points>
-            <lineSegments ref={lines}>
-                <bufferGeometry>
-                    <bufferAttribute
-                        attach="attributes-position"
-                        count={linePositions.length / 3}
-                        array={linePositions}
-                        itemSize={3}
+                </points>
+                <lineSegments ref={lines}>
+                    <bufferGeometry>
+                        <bufferAttribute
+                            attach="attributes-position"
+                            count={linePositions.length / 3}
+                            array={linePositions}
+                            itemSize={3}
+                        />
+                    </bufferGeometry>
+                    <lineBasicMaterial
+                        color={color}
+                        transparent={true}
+                        opacity={opacityLines}
+                        blending={THREE.AdditiveBlending}
+                        depthWrite={false}
                     />
-                </bufferGeometry>
-                <lineBasicMaterial
-                    color={color}
-                    transparent={true}
-                    opacity={opacityLines}
-                    blending={THREE.AdditiveBlending}
-                    depthWrite={false}
-                />
-            </lineSegments>
+                </lineSegments>
+            </group>
         </group>
     );
 };
 
 export default ParticleNetwork;
-
