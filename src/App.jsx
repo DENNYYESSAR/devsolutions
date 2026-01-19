@@ -4,10 +4,11 @@ import { ThemeProvider } from './components/ThemeContext';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Technologies from './components/Technologies';
-import About from './components/About';
+import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
         <Hero />
         <Services />
         <Technologies />
-        <About />
+        <WhyChooseUs />
         <Testimonials />
         <Contact />
+        <BackToTop />
         <Footer />
       </div>
     </ThemeProvider>

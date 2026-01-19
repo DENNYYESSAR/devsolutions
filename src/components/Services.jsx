@@ -11,42 +11,42 @@ const Services = () => {
     const services = [
         {
             icon: <Code className="w-8 h-8" />,
-            title: "Launch Faster, Convert More",
+            title: "Full-Stack Web Development",
             description: "Get a stunning website that loads instantly, works on every device, and turns visitors into customers. We handle the complexity so you can focus on your business.",
             features: ["Mobile-First Experience", "Faster Page Loads", "Higher Conversions"],
             image: serviceWebDev
         },
         {
             icon: <Database className="w-8 h-8" />,
-            title: "Your Data, Always Accessible",
+            title: "Database Solutions",
             description: "Keep your business data safe, organized, and lightning-fast to access. Never worry about losing information or slow systems again.",
             features: ["24/7 Data Access", "Blazing Fast Queries", "Zero Data Loss"],
             image: serviceDatabase
         },
         {
             icon: <Cloud className="w-8 h-8" />,
-            title: "Scale Without Worry",
+            title: "Cloud & DevOps",
             description: "Grow your business without growing your IT headaches. Our cloud solutions adapt to your needs automatically—pay only for what you use.",
             features: ["Reduce IT Costs", "Automatic Scaling", "99.9% Uptime"],
             image: serviceCloud
         },
         {
             icon: <Shield className="w-8 h-8" />,
-            title: "Protect What Matters Most",
+            title: "Cybersecurity & Pentesting",
             description: "Shield your customers' data and your reputation from cyber threats. Sleep better knowing your business is protected by enterprise-grade security.",
             features: ["Customer Data Protection", "Threat Prevention", "Peace of Mind"],
             image: serviceSecurity
         },
         {
             icon: <LineChart className="w-8 h-8" />,
-            title: "Smarter Decisions, Faster Growth",
+            title: "AI/ML Solutions",
             description: "Turn your data into actionable insights that drive revenue. Our AI solutions help you predict trends, automate tasks, and stay ahead of competitors.",
             features: ["Data-Driven Insights", "Automated Workflows", "Competitive Advantage"],
             image: serviceAiMl
         },
         {
             icon: <Cog className="w-8 h-8" />,
-            title: "Connect Everything, Work Smarter",
+            title: "API Development & Automation",
             description: "Eliminate manual busywork by connecting all your tools seamlessly. Automate repetitive tasks and give your team more time for what matters.",
             features: ["Save Hours Weekly", "Eliminate Errors", "Seamless Integration"],
             image: serviceWebDev
@@ -74,6 +74,7 @@ const Services = () => {
                                     <img
                                         src={service.image}
                                         alt={service.title}
+                                        loading="lazy"
                                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                     />
                                     <div className="absolute bottom-4 left-6 w-12 h-12 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-blue-600 shadow-lg z-20">

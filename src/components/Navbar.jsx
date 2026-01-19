@@ -19,17 +19,17 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-4">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-2">
+          <a href="#" className="flex items-center space-x-2">
             <img src="/logo.png" alt="DevSolutions Logo" className="w-10 h-10 object-contain" />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               DevSolutions
             </span>
-          </div>
+          </a>
 
           <div className="hidden md:flex items-center space-x-8">
             <a href="#services" className={`${isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'} hover:text-blue-600 dark:hover:text-blue-400 transition`}>Services</a>
             <a href="#technologies" className={`${isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'} hover:text-blue-600 dark:hover:text-blue-400 transition`}>Technologies</a>
-            <a href="#about" className={`${isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'} hover:text-blue-600 dark:hover:text-blue-400 transition`}>About</a>
+            <a href="#why-us" className={`${isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'} hover:text-blue-600 dark:hover:text-blue-400 transition`}>Why Us</a>
 
             <button
               onClick={toggleTheme}
@@ -82,13 +82,13 @@ const Navbar = () => {
               className="md:hidden fixed top-0 left-0 right-0 z-40 bg-white dark:bg-slate-900 shadow-2xl rounded-b-[2.5rem] overflow-hidden border-b border-slate-100 dark:border-slate-800"
             >
               <div className="flex flex-col space-y-3 px-6 pb-12 pt-24 text-center">
-                {['Home', 'Services', 'Technologies', 'About'].map((item, idx) => (
+                {['Home', 'Services', 'Technologies', 'Why Us'].map((item, idx) => (
                   <motion.a
                     key={item}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.1 * idx }}
-                    href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
+                    href={item === 'Home' ? '#' : `#${item.toLowerCase().replace(' ', '-')}`}
                     onClick={() => setIsMenuOpen(false)}
                     className="text-3xl font-extrabold text-slate-900 dark:text-white hover:text-blue-600 transition-all py-2"
                   >

@@ -6,6 +6,8 @@ import AnimatedSection from './AnimatedSection';
 import Typewriter from './Typewriter';
 import Scene from './3d/Scene';
 
+import Counter from './Counter';
+
 const Hero = () => {
     const floatingCards = [
         { icon: <Brain className="w-6 h-6 text-blue-400" />, label: "AI Powered", delay: 0, x: -20, y: -20 },
@@ -110,15 +112,21 @@ const Hero = () => {
                         <AnimatedSection delay={0.6}>
                             <div className="flex flex-wrap gap-6 md:gap-10 mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 max-w-lg">
                                 <div className="text-center">
-                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">50+</div>
+                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
+                                        <Counter value={50} suffix="+" />
+                                    </div>
                                     <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Projects Delivered</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">98%</div>
+                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
+                                        <Counter value={98} suffix="%" />
+                                    </div>
                                     <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Client Satisfaction</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">24/7</div>
+                                    <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
+                                        <Counter value={24} suffix="/7" />
+                                    </div>
                                     <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Support Available</div>
                                 </div>
                             </div>
@@ -129,5 +137,6 @@ const Hero = () => {
         </section>
     );
 };
+
 
 export default Hero;

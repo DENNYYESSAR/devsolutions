@@ -2,7 +2,7 @@ import React from 'react';
 import { Check, Shield, Users, Zap, Globe, Cpu } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
-const About = () => {
+const WhyChooseUs = () => {
     const whyChooseUs = [
         { icon: <Cpu className="w-6 h-6" />, title: "Results You Can Trust", desc: "Join hundreds of businesses who've achieved measurable growth with our proven solutions. Your success is our track record." },
         { icon: <Globe className="w-6 h-6" />, title: "One Partner, Complete Solutions", desc: "Stop juggling multiple vendors. Get everything you need—from idea to launch to ongoing support—from a single trusted team." },
@@ -13,7 +13,7 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="py-24 px-6 lg:px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <section id="why-us" className="py-24 px-6 lg:px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-20">
@@ -47,4 +47,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default WhyChooseUs;

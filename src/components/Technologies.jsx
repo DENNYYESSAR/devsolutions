@@ -1,13 +1,14 @@
 import React from 'react';
-import { ChevronRight, Database, Globe, Lock, Server, Layers } from 'lucide-react';
+import { ChevronRight, Database, Globe, Lock, Server, Layers, Terminal } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const Technologies = () => {
     const technologies = [
         { category: "Frontend", icon: <Globe className="w-5 h-5" />, items: ["React", "Next.js", "Vue.js", "TypeScript"] },
         { category: "Backend", icon: <Server className="w-5 h-5" />, items: ["Node.js", "Python", "Flask", "Express"] },
-        { category: "Database", icon: <Database className="w-5 h-5" />, items: ["PostgreSQL", "MongoDB", "MySQL"] },
-        { category: "Cloud", icon: <Layers className="w-5 h-5" />, items: ["AWS", "GCP", "Docker", "Kubernetes"] },
+        { category: "Database", icon: <Database className="w-5 h-5" />, items: ["PostgreSQL", "MongoDB", "MySQL", "Redis"] },
+        { category: "Cloud", icon: <Layers className="w-5 h-5" />, items: ["AWS", "GCP", "Azure", "Oracle"] },
+        { category: "DevOps", icon: <Terminal className="w-5 h-5" />, items: ["Docker", "Kubernetes", "Terraform", "GitHub Actions"] },
         { category: "Security", icon: <Lock className="w-5 h-5" />, items: ["Metasploit", "Burp Suite", "Nmap", "Wireshark"] }
     ];
 

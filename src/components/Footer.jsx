@@ -40,7 +40,7 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold mb-6 text-lg">Company</h4>
                         <ul className="space-y-4 text-slate-600 dark:text-slate-400">
-                            <li><a href="#about" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />About Us</a></li>
+                            <li><a href="#why-us" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Why Us</a></li>
                             <li><a href="#technologies" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Technologies</a></li>
                             <li><a href="#contact" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Contact</a></li>
                             <li><a href="#" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Careers</a></li>
