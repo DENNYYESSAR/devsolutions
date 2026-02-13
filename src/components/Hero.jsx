@@ -110,24 +110,24 @@ const Hero = () => {
                         </AnimatedSection>
 
                         <AnimatedSection delay={0.6}>
-                            <div className="flex flex-wrap gap-10 md:gap-14 mt-16 pt-10 border-t border-slate-200 dark:border-slate-800 max-w-lg">
+                            <div className="grid grid-cols-3 gap-2 md:gap-14 mt-16 pt-10 border-t border-slate-200 dark:border-slate-800 max-w-lg">
                                 <div className="text-center">
                                     <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
                                         <Counter value={50} suffix="+" />
                                     </div>
-                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Projects Delivered</div>
+                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Projects Delivered</div>
                                 </div>
                                 <div className="text-center">
                                     <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
                                         <Counter value={98} suffix="%" />
                                     </div>
-                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Client Satisfaction</div>
+                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Client Satisfaction</div>
                                 </div>
                                 <div className="text-center">
                                     <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
                                         <Counter value={24} suffix="/7" />
                                     </div>
-                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium">Support Available</div>
+                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Support Available</div>
                                 </div>
                             </div>
                         </AnimatedSection>
