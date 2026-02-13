@@ -4,22 +4,22 @@ import AnimatedSection from './AnimatedSection';
 
 const WhyChooseUs = () => {
     const whyChooseUs = [
-        { icon: <Cpu className="w-6 h-6" />, title: "Results You Can Trust", desc: "Join hundreds of businesses who've achieved measurable growth with our proven solutions. Your success is our track record." },
-        { icon: <Globe className="w-6 h-6" />, title: "One Partner, Complete Solutions", desc: "Stop juggling multiple vendors. Get everything you need—from idea to launch to ongoing support—from a single trusted team." },
-        { icon: <Users className="w-6 h-6" />, title: "Smarter Decisions, Faster Growth", desc: "Make confident business decisions backed by AI-powered insights. Turn your data into your greatest competitive advantage." },
-        { icon: <Zap className="w-6 h-6" />, title: "Grow Without Limits", desc: "Your success shouldn't be limited by technology. Our solutions grow with you, handling any spike in demand effortlessly." },
-        { icon: <Shield className="w-6 h-6" />, title: "Your Data, Always Protected", desc: "Rest easy knowing your customers' data and your business are protected by enterprise-grade security at every level." },
-        { icon: <Check className="w-6 h-6" />, title: "On Time, On Budget, Every Time", desc: "No surprises, no hidden costs. Get transparent communication and reliable delivery that respects your timeline and budget." }
+        { icon: <Cpu className="w-6 h-6" />, title: "Proven Track Record", desc: "Our portfolio of successful projects speaks for itself. We deliver measurable results that drive real business growth for organizations across industries." },
+        { icon: <Globe className="w-6 h-6" />, title: "End-to-End Solutions", desc: "From initial concept through development, deployment, and ongoing support, we serve as your single technology partner for the entire project lifecycle." },
+        { icon: <Users className="w-6 h-6" />, title: "Data-Driven Strategy", desc: "We empower your decision-making with AI-powered analytics and actionable insights that turn your data into a measurable competitive advantage." },
+        { icon: <Zap className="w-6 h-6" />, title: "Built to Scale", desc: "Our architectures are designed for growth. Whether you're handling 100 or 100,000 users, our solutions scale seamlessly to meet demand." },
+        { icon: <Shield className="w-6 h-6" />, title: "Enterprise-Grade Security", desc: "We implement multi-layered security protocols, encryption standards, and compliance frameworks to safeguard your data at every level." },
+        { icon: <Check className="w-6 h-6" />, title: "Transparent Delivery", desc: "We operate with full transparency on timelines, costs, and progress. You receive regular updates and clear communication at every milestone." }
     ];
 
     return (
-        <section id="why-us" className="py-24 px-6 lg:px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto">
+        <section id="why-us" className="py-24 px-2 lg:px-1 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+            <div className="max-w-screen-2xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-20">
-                        <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">What You Get Working With Us</h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                            Experience the difference when technology works for you, not against you. Here's what our clients love most.
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">Why Partner With Us</h2>
+                        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                            We combine technical expertise with a client-first approach to deliver solutions that consistently exceed expectations.
                         </p>
                     </div>
                 </AnimatedSection>

@@ -19,7 +19,7 @@ const Hero = () => {
         <section className="relative z-0 min-h-screen flex items-center pt-20 pb-16 lg:pb-0 overflow-hidden">
             <Scene />
 
-            <div className="max-w-screen-2xl mx-auto px-6 lg:px-4 relative z-10 w-full">
+            <div className="max-w-screen-2xl mx-auto px-2 lg:px-1 relative z-10 w-full">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* 3D Floating Visuals (First in DOM for mobile top placement) */}
                     <div className="relative h-[300px] md:h-[500px] lg:mt-0 perspective-1000 lg:order-2">
@@ -76,41 +76,41 @@ const Hero = () => {
                     </div>
 
                     {/* Text Content */}
-                    <div className="max-w-3xl relative lg:order-1">
+                    <div className="max-w-3xl relative lg:order-1 -ml-4 lg:-ml-8">
                         <AnimatedSection>
-                            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-400 mb-6 backdrop-blur-md text-sm font-medium shadow-sm">
+                            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-400 mb-8 backdrop-blur-md text-sm font-medium shadow-sm">
                                 <span className="w-2 h-2 rounded-full bg-blue-500 mr-2 animate-pulse"></span>
-                                Your Success, Powered by AI
+                                Enterprise Solutions, Powered by AI
                             </div>
 
-                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-white tracking-tight">
-                                Unlock Your <br />
+                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-slate-900 dark:text-white tracking-tight">
+                                Elevate Your <br />
                                 <span className="text-blue-600">
-                                    <Typewriter words={["Business Potential", "Competitive Edge", "Growth Strategy", "Digital Future"]} />
+                                    <Typewriter words={["Business Potential", "Competitive Edge", "Growth Strategy", "Digital Transformation"]} />
                                 </span>
                             </h1>
                         </AnimatedSection>
 
                         <AnimatedSection delay={0.2}>
-                            <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-lg font-medium">
-                                Save time, reduce costs, and accelerate growth with smart technology solutions designed around your unique business needs.
+                            <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed max-w-lg font-medium">
+                                We help organizations streamline operations, reduce costs, and accelerate growth through tailored technology solutions built around your unique objectives.
                             </p>
                         </AnimatedSection>
 
                         <AnimatedSection delay={0.4}>
-                            <div className="flex flex-row gap-3 md:gap-4">
+                            <div className="flex flex-row gap-6 md:gap-8">
                                 <a href="#contact" className="group flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold flex items-center justify-center shadow-lg shadow-blue-600/20 transition-all duration-300 text-sm md:text-base">
-                                    Get Your Free Consultation
+                                    Schedule a Consultation
                                     <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                                 </a>
                                 <a href="#services" className="flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 rounded-xl font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 text-center text-sm md:text-base">
-                                    See How We Help
+                                    Explore Our Services
                                 </a>
                             </div>
                         </AnimatedSection>
 
                         <AnimatedSection delay={0.6}>
-                            <div className="flex flex-wrap gap-6 md:gap-10 mt-10 pt-8 border-t border-slate-200 dark:border-slate-800 max-w-lg">
+                            <div className="flex flex-wrap gap-10 md:gap-14 mt-16 pt-10 border-t border-slate-200 dark:border-slate-800 max-w-lg">
                                 <div className="text-center">
                                     <div className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400">
                                         <Counter value={50} suffix="+" />

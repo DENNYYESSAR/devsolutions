@@ -8,7 +8,7 @@ const Testimonials = () => {
             name: "Sarah Mitchell",
             role: "CEO",
             company: "TechFlow Innovations",
-            content: "DevSolutions transformed our entire digital infrastructure. Their AI solutions cut our operational costs by 40% and the team delivered everything ahead of schedule. Truly exceptional partners.",
+            content: "DevSolutions completely modernized our digital infrastructure. Their AI-driven solutions reduced our operational costs by 40%, and the team consistently delivered ahead of schedule. An exceptional technology partner.",
             rating: 5,
             avatar: "SM"
         },
@@ -16,7 +16,7 @@ const Testimonials = () => {
             name: "James Okonkwo",
             role: "CTO",
             company: "FinServe Africa",
-            content: "We needed a secure, scalable platform for our fintech app. DevSolutions delivered beyond expectations—our transaction speed improved 3x and we haven't had a single security incident since launch.",
+            content: "We required a secure, scalable platform for our fintech application. DevSolutions exceeded every benchmark. Transaction throughput improved 3x, and we have maintained a flawless security record since launch.",
             rating: 5,
             avatar: "JO"
         },
@@ -24,20 +24,20 @@ const Testimonials = () => {
             name: "Elena Rodriguez",
             role: "Operations Director",
             company: "GlobalRetail Co",
-            content: "From concept to deployment in just 8 weeks. Their cloud expertise saved us months of development time and their ongoing support has been invaluable. Highly recommend for any serious project.",
+            content: "From concept to production deployment in just 8 weeks. Their cloud architecture expertise accelerated our timeline significantly, and their ongoing support continues to be invaluable. Highly recommended for enterprise-grade projects.",
             rating: 5,
             avatar: "ER"
         }
     ];
 
     return (
-        <section id="testimonials" className="py-24 px-6 lg:px-4 bg-white dark:bg-slate-950 transition-colors duration-300">
+        <section id="testimonials" className="py-24 px-2 lg:px-1 bg-white dark:bg-slate-950 transition-colors duration-300">
             <div className="max-w-screen-2xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">What Our Clients Say</h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                            Don't just take our word for it—hear from businesses we've helped succeed
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Client Testimonials</h2>
+                        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                            Trusted by industry leaders. Here is what our clients have to say about working with us
                         </p>
                     </div>
                 </AnimatedSection>

@@ -13,12 +13,12 @@ const Technologies = () => {
     ];
 
     return (
-        <section id="technologies" className="py-24 px-6 lg:px-4 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+        <section id="technologies" className="py-24 px-2 lg:px-1 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
             <div className="max-w-screen-2xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">Technology Stack</h2>
-                        <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">Technology Stack</h2>
+                        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
                             Leveraging modern technologies to build robust, scalable solutions
                         </p>
                     </div>

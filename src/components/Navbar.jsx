@@ -4,9 +4,16 @@ import { useTheme } from './ThemeContext';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 
+const navLinks = [
+  { label: 'Services', href: '#services', id: 'services' },
+  { label: 'Technologies', href: '#technologies', id: 'technologies' },
+  { label: 'Why Us', href: '#why-us', id: 'why-us' },
+];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
@@ -15,11 +22,44 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const sectionIds = ['contact', 'faq', 'testimonials', 'why-us', 'technologies', 'services'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const linkClass = (id) => {
+    const isActive = activeSection === id;
+    return `transition font-medium ${
+      isActive
+        ? 'text-blue-600 dark:text-blue-400'
+        : isScrolled
+        ? 'text-gray-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400'
+        : 'text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400'
+    }`;
+  };
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
-      <div className="max-w-screen-2xl mx-auto px-6 lg:px-4">
+      <div className="max-w-screen-2xl mx-auto px-2 lg:px-1">
         <div className="flex justify-between items-center h-20">
-          <a href="#" className="flex items-center space-x-2">
+          <a href="#" className="flex items-center space-x-2 -ml-4 lg:-ml-8">
             <img src="/logo.png" alt="DevSolutions Logo" className="w-10 h-10 object-contain" />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               DevSolutions
@@ -27,9 +67,11 @@ const Navbar = () => {
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className={`${isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'} hover:text-blue-600 dark:hover:text-blue-400 transition`}>Services</a>
-            <a href="#technologies" className={`${isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'} hover:text-blue-600 dark:hover:text-blue-400 transition`}>Technologies</a>
-            <a href="#why-us" className={`${isScrolled ? 'text-gray-700 dark:text-slate-200' : 'text-slate-700 dark:text-slate-200'} hover:text-blue-600 dark:hover:text-blue-400 transition`}>Why Us</a>
+            {navLinks.map((link) => (
+              <a key={link.id} href={link.href} className={linkClass(link.id)}>
+                {link.label}
+              </a>
+            ))}
 
             <button
               onClick={toggleTheme}

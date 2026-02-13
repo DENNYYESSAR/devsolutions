@@ -6,55 +6,56 @@ import serviceDatabase from '../assets/service_database.png';
 import serviceCloud from '../assets/service_cloud.png';
 import serviceSecurity from '../assets/service_security.png';
 import serviceAiMl from '../assets/service_ai_ml.jpg';
+import serviceApi from '../assets/service_api.svg';
 
 const Services = () => {
     const services = [
         {
             icon: <Code className="w-8 h-8" />,
             title: "Full-Stack Web Development",
-            description: "Get a stunning website that loads instantly, works on every device, and turns visitors into customers. We handle the complexity so you can focus on your business.",
-            features: ["Mobile-First Experience", "Faster Page Loads", "Higher Conversions"],
+            description: "We deliver high-performance web applications with responsive design, optimized load times, and conversion-focused architecture. From single-page apps to complex platforms, we build solutions that scale.",
+            features: ["Responsive Design", "Optimized Performance", "Conversion-Focused"],
             image: serviceWebDev
         },
         {
             icon: <Database className="w-8 h-8" />,
             title: "Database Solutions",
-            description: "Keep your business data safe, organized, and lightning-fast to access. Never worry about losing information or slow systems again.",
-            features: ["24/7 Data Access", "Blazing Fast Queries", "Zero Data Loss"],
+            description: "We design and implement robust database architectures that ensure data integrity, high availability, and optimal query performance across your entire infrastructure.",
+            features: ["High Availability", "Optimized Queries", "Data Integrity"],
             image: serviceDatabase
         },
         {
             icon: <Cloud className="w-8 h-8" />,
             title: "Cloud & DevOps",
-            description: "Grow your business without growing your IT headaches. Our cloud solutions adapt to your needs automatically—pay only for what you use.",
-            features: ["Reduce IT Costs", "Automatic Scaling", "99.9% Uptime"],
+            description: "We architect scalable cloud infrastructure with automated CI/CD pipelines, container orchestration, and cost-optimized resource management tailored to your workload.",
+            features: ["Cost Optimization", "Auto-Scaling", "99.9% Uptime"],
             image: serviceCloud
         },
         {
             icon: <Shield className="w-8 h-8" />,
             title: "Cybersecurity & Pentesting",
-            description: "Shield your customers' data and your reputation from cyber threats. Sleep better knowing your business is protected by enterprise-grade security.",
-            features: ["Customer Data Protection", "Threat Prevention", "Peace of Mind"],
+            description: "We provide comprehensive security assessments, vulnerability analysis, and penetration testing to identify and mitigate risks before they impact your organization.",
+            features: ["Vulnerability Assessment", "Threat Mitigation", "Compliance Assurance"],
             image: serviceSecurity
         },
         {
             icon: <LineChart className="w-8 h-8" />,
             title: "AI/ML Solutions",
-            description: "Turn your data into actionable insights that drive revenue. Our AI solutions help you predict trends, automate tasks, and stay ahead of competitors.",
-            features: ["Data-Driven Insights", "Automated Workflows", "Competitive Advantage"],
+            description: "We develop intelligent systems that transform raw data into strategic insights, enabling predictive analytics, process automation, and data-driven decision making.",
+            features: ["Predictive Analytics", "Process Automation", "Strategic Insights"],
             image: serviceAiMl
         },
         {
             icon: <Cog className="w-8 h-8" />,
             title: "API Development & Automation",
-            description: "Eliminate manual busywork by connecting all your tools seamlessly. Automate repetitive tasks and give your team more time for what matters.",
-            features: ["Save Hours Weekly", "Eliminate Errors", "Seamless Integration"],
-            image: serviceWebDev
+            description: "We design and build robust APIs and workflow automation systems that connect your tools, eliminate manual processes, and enable seamless data flow across your organization.",
+            features: ["Workflow Automation", "Error Reduction", "System Integration"],
+            image: serviceApi
         }
     ];
 
     return (
-        <section id="services" className="py-24 px-6 lg:px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <section id="services" className="py-24 px-2 lg:px-1 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
             <div className="max-w-screen-2xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-20">

@@ -7,6 +7,7 @@ import Technologies from './components/Technologies';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 
@@ -20,6 +21,7 @@ function App() {
         <Technologies />
         <WhyChooseUs />
         <Testimonials />
+        <FAQ />
         <Contact />
         <BackToTop />
         <Footer />
