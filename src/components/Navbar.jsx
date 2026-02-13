@@ -57,7 +57,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
-      <div className="max-w-screen-2xl mx-auto px-2 lg:px-1">
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="flex justify-between items-center h-20">
           <a href="#" className="flex items-center space-x-2 -ml-4 lg:-ml-8">
             <img src="/logo.png" alt="DevSolutions Logo" className="w-10 h-10 object-contain" />

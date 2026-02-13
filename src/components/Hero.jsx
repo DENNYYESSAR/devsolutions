@@ -19,7 +19,7 @@ const Hero = () => {
         <section className="relative z-0 min-h-screen flex items-center pt-20 pb-16 lg:pb-0 overflow-hidden">
             <Scene />
 
-            <div className="max-w-screen-2xl mx-auto px-2 lg:px-1 relative z-10 w-full">
+            <div className="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-20 relative z-10 w-full">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* 3D Floating Visuals (First in DOM for mobile top placement) */}
                     <div className="relative h-[300px] md:h-[500px] lg:mt-0 perspective-1000 lg:order-2">

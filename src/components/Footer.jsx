@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <>
         <footer className="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white pt-24 pb-12 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
-            <div className="max-w-screen-2xl mx-auto px-2 lg:px-1">
+            <div className="max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-20">
                 <div className="grid md:grid-cols-4 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-1">
                         <div className="flex items-center space-x-2 mb-6">

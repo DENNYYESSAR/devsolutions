@@ -31,7 +31,7 @@ const Testimonials = () => {
     ];
 
     return (
-        <section id="testimonials" className="py-24 px-2 lg:px-1 bg-white dark:bg-slate-950 transition-colors duration-300">
+        <section id="testimonials" className="py-24 px-6 md:px-12 lg:px-20 bg-white dark:bg-slate-950 transition-colors duration-300">
             <div className="max-w-screen-2xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-16">

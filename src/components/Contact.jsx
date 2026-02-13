@@ -52,7 +52,7 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-24 px-2 lg:px-1 bg-slate-50 dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
+        <section id="contact" className="py-24 px-6 md:px-12 lg:px-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
             {/* Background Decor */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/50 dark:bg-blue-900/10 skew-x-12 transform translate-x-1/4"></div>
 

@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
     ];
 
     return (
-        <section id="why-us" className="py-24 px-2 lg:px-1 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <section id="why-us" className="py-24 px-6 md:px-12 lg:px-20 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
             <div className="max-w-screen-2xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-20">
