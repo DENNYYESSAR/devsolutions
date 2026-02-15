@@ -45,11 +45,11 @@ const FAQ = () => {
     };
 
     return (
-        <section id="faq" className="py-24 px-2 lg:px-1 bg-white dark:bg-slate-950 transition-colors duration-300">
-            <div className="max-w-5xl mx-auto">
+        <section id="faq" className="py-24 px-6 md:px-12 lg:px-48 bg-white dark:bg-slate-950 transition-colors duration-300">
+            <div className="max-w-4xl mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-16">
-                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-400 mb-4 text-sm font-medium">
+                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-50 dark:bg-cyan-900/30 border border-cyan-100 dark:border-cyan-800 text-cyan-600 dark:text-cyan-400 mb-4 text-sm font-medium">
                             <HelpCircle className="w-4 h-4 mr-2" />
                             Got Questions?
                         </div>
@@ -64,35 +64,31 @@ const FAQ = () => {
                     {faqs.map((faq, index) => (
                         <AnimatedSection key={index} delay={index * 0.05}>
                             <div
-                                className={`bg-slate-50 dark:bg-slate-900 rounded-2xl border transition-all duration-300 ${
-                                    openIndex === index
-                                        ? 'border-blue-200 dark:border-blue-800 shadow-lg shadow-blue-500/5'
-                                        : 'border-slate-100 dark:border-slate-800 hover:border-blue-100 dark:hover:border-slate-700'
-                                }`}
+                                className={`bg-slate-50 dark:bg-slate-900 rounded-2xl border transition-all duration-300 ${openIndex === index
+                                    ? 'border-cyan-200 dark:border-cyan-800 shadow-lg shadow-cyan-500/5'
+                                    : 'border-slate-100 dark:border-slate-800 hover:border-cyan-100 dark:hover:border-slate-700'
+                                    }`}
                             >
                                 <button
                                     onClick={() => toggle(index)}
                                     className="w-full flex items-center justify-between p-6 text-left gap-4"
                                 >
-                                    <span className={`text-lg font-semibold transition-colors ${
-                                        openIndex === index
-                                            ? 'text-blue-600 dark:text-blue-400'
-                                            : 'text-slate-900 dark:text-white'
-                                    }`}>
+                                    <span className={`text-lg font-semibold transition-colors ${openIndex === index
+                                        ? 'text-cyan-600 dark:text-cyan-400'
+                                        : 'text-slate-900 dark:text-white'
+                                        }`}>
                                         {faq.question}
                                     </span>
                                     <ChevronDown
-                                        className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${
-                                            openIndex === index
-                                                ? 'rotate-180 text-blue-600 dark:text-blue-400'
-                                                : 'text-slate-400'
-                                        }`}
+                                        className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${openIndex === index
+                                            ? 'rotate-180 text-cyan-600 dark:text-cyan-400'
+                                            : 'text-slate-400'
+                                            }`}
                                     />
                                 </button>
                                 <div
-                                    className={`overflow-hidden transition-all duration-300 ${
-                                        openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
-                                    }`}
+                                    className={`overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-[500px] opacity-100 pb-6' : 'max-h-0 opacity-0'
+                                        }`}
                                 >
                                     <p className="px-6 text-slate-600 dark:text-slate-400 leading-relaxed">
                                         {faq.answer}

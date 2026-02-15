@@ -13,8 +13,8 @@ const Technologies = () => {
     ];
 
     return (
-        <section id="technologies" className="py-24 px-6 md:px-12 lg:px-20 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
-            <div className="max-w-screen-2xl mx-auto">
+        <section id="technologies" className="py-24 px-6 md:px-12 lg:px-48 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 transition-colors duration-300">
+            <div className="w-full mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-white">Technology Stack</h2>
@@ -28,9 +28,9 @@ const Technologies = () => {
                     <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
                         {[...technologies, ...technologies, ...technologies].map((tech, index) => (
                             <div key={index} className="px-4 flex-shrink-0 w-[300px] md:w-[350px]">
-                                <div className="bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 group h-full shadow-sm hover:shadow-xl">
+                                <div className="bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-cyan-500/50 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 group h-full shadow-sm hover:shadow-xl">
                                     <div className="flex items-center gap-4 mb-6">
-                                        <div className="p-3 rounded-2xl bg-white dark:bg-slate-700 text-blue-600 dark:text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
+                                        <div className="p-3 rounded-2xl bg-white dark:bg-slate-700 text-cyan-600 dark:text-cyan-400 group-hover:bg-cyan-600 group-hover:text-white transition-all duration-300 shadow-sm">
                                             {tech.icon}
                                         </div>
                                         <h3 className="text-xl font-extrabold text-slate-900 dark:text-white">{tech.category}</h3>
@@ -38,7 +38,7 @@ const Technologies = () => {
                                     <ul className="space-y-4">
                                         {tech.items.map((item, idx) => (
                                             <li key={idx} className="flex items-center text-slate-600 dark:text-slate-300 font-medium group-hover:text-slate-900 dark:group-hover:text-slate-100 transition-colors">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-3 opacity-50 group-hover:opacity-100"></div>
+                                                <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mr-3 opacity-50 group-hover:opacity-100"></div>
                                                 {item}
                                             </li>
                                         ))}

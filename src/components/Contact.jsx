@@ -52,11 +52,11 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-24 px-6 md:px-12 lg:px-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
+        <section id="contact" className="py-24 px-6 md:px-12 lg:px-48 bg-slate-50 dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
             {/* Background Decor */}
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/50 dark:bg-blue-900/10 skew-x-12 transform translate-x-1/4"></div>
 
-            <div className="max-w-screen-2xl mx-auto relative z-10">
+
+            <div className="w-full mx-auto relative z-10">
                 <AnimatedSection>
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Get in Touch</h2>
@@ -79,7 +79,7 @@ const Contact = () => {
                                             onChange={handleChange}
                                             placeholder="Your Name"
                                             required
-                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 outline-none transition-all dark:text-white"
+                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 dark:focus:ring-cyan-900 outline-none transition-all dark:text-white"
                                         />
                                     </div>
                                     <div>
@@ -91,7 +91,7 @@ const Contact = () => {
                                             onChange={handleChange}
                                             placeholder="Your Email"
                                             required
-                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 outline-none transition-all dark:text-white"
+                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 dark:focus:ring-cyan-900 outline-none transition-all dark:text-white"
                                         />
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@ const Contact = () => {
                                             value={formData.phone}
                                             onChange={handleChange}
                                             placeholder="Phone Number"
-                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 outline-none transition-all dark:text-white"
+                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 dark:focus:ring-cyan-900 outline-none transition-all dark:text-white"
                                         />
                                     </div>
                                     <div>
@@ -114,7 +114,7 @@ const Contact = () => {
                                             name="service"
                                             value={formData.service}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 outline-none transition-all dark:text-white"
+                                            className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 dark:focus:ring-cyan-900 outline-none transition-all dark:text-white"
                                         >
                                             <option value="">Select a Service</option>
                                             <option value="web">Web Development</option>
@@ -136,13 +136,13 @@ const Contact = () => {
                                         placeholder="Tell us about your project..."
                                         rows="4"
                                         required
-                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900 outline-none transition-all resize-none dark:text-white"
+                                        className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 dark:focus:ring-cyan-900 outline-none transition-all resize-none dark:text-white"
                                     ></textarea>
                                 </div>
                                 <button
                                     type="submit"
                                     disabled={formStatus === 'sending'}
-                                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                                    className="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                                 >
                                     {formStatus === 'sending' ? (
                                         <>
@@ -181,7 +181,7 @@ const Contact = () => {
                             <h3 className="text-2xl font-bold mb-8 text-slate-900 dark:text-white">Contact Information</h3>
                             <div className="space-y-8">
                                 <div className="flex items-start space-x-6">
-                                    <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                                    <div className="w-12 h-12 bg-cyan-50 dark:bg-cyan-900/20 rounded-2xl flex items-center justify-center text-cyan-600 dark:text-cyan-400 flex-shrink-0">
                                         <MapPin className="w-6 h-6" />
                                     </div>
                                     <div>
@@ -191,7 +191,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-6">
-                                    <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                                    <div className="w-12 h-12 bg-cyan-50 dark:bg-cyan-900/20 rounded-2xl flex items-center justify-center text-cyan-600 dark:text-cyan-400 flex-shrink-0">
                                         <Phone className="w-6 h-6" />
                                     </div>
                                     <div>
@@ -201,7 +201,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-6">
-                                    <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                                    <div className="w-12 h-12 bg-cyan-50 dark:bg-cyan-900/20 rounded-2xl flex items-center justify-center text-cyan-600 dark:text-cyan-400 flex-shrink-0">
                                         <Mail className="w-6 h-6" />
                                     </div>
                                     <div>
@@ -213,7 +213,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="bg-gradient-to-br from-blue-600 to-cyan-500 p-8 rounded-3xl text-white shadow-xl shadow-blue-500/20 relative overflow-hidden flex-1 flex flex-col justify-center">
+                        <div className="bg-cyan-600 p-8 rounded-3xl text-white shadow-xl shadow-cyan-500/20 relative overflow-hidden flex-1 flex flex-col justify-center">
                             <div className="relative z-10">
                                 <h3 className="text-2xl font-bold mb-4">Let's Build Something Great</h3>
                                 <p className="mb-6 opacity-90 text-sm leading-relaxed">Receive expert guidance tailored to your specific business objectives, at no cost.</p>

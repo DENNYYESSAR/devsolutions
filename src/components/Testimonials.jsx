@@ -31,8 +31,8 @@ const Testimonials = () => {
     ];
 
     return (
-        <section id="testimonials" className="py-24 px-6 md:px-12 lg:px-20 bg-white dark:bg-slate-950 transition-colors duration-300">
-            <div className="max-w-screen-2xl mx-auto">
+        <section id="testimonials" className="py-24 px-6 md:px-12 lg:px-48 bg-white dark:bg-slate-950 transition-colors duration-300">
+            <div className="w-full mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Client Testimonials</h2>
@@ -42,12 +42,12 @@ const Testimonials = () => {
                     </div>
                 </AnimatedSection>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 justify-center">
                     {testimonials.map((testimonial, index) => (
                         <AnimatedSection key={index} delay={index * 0.15}>
-                            <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 h-full flex flex-col relative group">
+                            <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 hover:border-cyan-200 dark:hover:border-cyan-800 transition-all duration-300 h-full flex flex-col relative group">
                                 {/* Quote icon */}
-                                <div className="absolute top-6 right-6 text-blue-100 dark:text-slate-800 group-hover:text-blue-200 dark:group-hover:text-slate-700 transition-colors">
+                                <div className="absolute top-6 right-6 text-cyan-100 dark:text-slate-800 group-hover:text-cyan-200 dark:group-hover:text-slate-700 transition-colors">
                                     <Quote className="w-12 h-12" />
                                 </div>
 
@@ -65,7 +65,7 @@ const Testimonials = () => {
 
                                 {/* Author */}
                                 <div className="flex items-center gap-4 pt-6 border-t border-slate-100 dark:border-slate-800">
-                                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                                    <div className="w-12 h-12 rounded-full bg-cyan-600 flex items-center justify-center text-white font-bold text-sm shadow-lg">
                                         {testimonial.avatar}
                                     </div>
                                     <div>
