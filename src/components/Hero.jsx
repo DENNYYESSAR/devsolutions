@@ -77,24 +77,34 @@ const Hero = () => {
 
                     {/* Text Content */}
                     <div className="max-w-3xl relative lg:order-1">
-                        <AnimatedSection>
-
-
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        >
                             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-slate-900 dark:text-white tracking-tight">
                                 Elevate Your <br />
                                 <span className="text-cyan-600">
                                     <Typewriter words={["Business Potential", "Competitive Edge", "Growth Strategy", "Digital Transformation"]} />
                                 </span>
                             </h1>
-                        </AnimatedSection>
+                        </motion.div>
 
-                        <AnimatedSection delay={0.2}>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        >
                             <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed max-w-lg font-medium">
                                 We help businesses streamline operations, reduce costs, and accelerate growth through tailored technology solutions built around your unique objectives.
                             </p>
-                        </AnimatedSection>
+                        </motion.div>
 
-                        <AnimatedSection delay={0.4}>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        >
                             <div className="flex flex-row gap-6 md:gap-8">
                                 <a href="#contact" className="group flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 bg-cyan-600 hover:bg-cyan-700 hover:shadow-cyan-500/40 text-white rounded-xl font-bold flex items-center justify-center shadow-lg shadow-cyan-600/20 transition-all duration-300 text-sm md:text-base">
                                     Schedule a Consultation
@@ -103,9 +113,13 @@ const Hero = () => {
                                     Explore Our Services
                                 </a>
                             </div>
-                        </AnimatedSection>
+                        </motion.div>
 
-                        <AnimatedSection delay={0.6}>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        >
                             <div className="grid grid-cols-3 gap-2 md:gap-14 mt-16 pt-10 border-t border-slate-200 dark:border-slate-800 max-w-lg">
                                 <div className="text-center">
                                     <div className="text-2xl md:text-3xl font-bold text-cyan-600 dark:text-cyan-400">
@@ -126,7 +140,7 @@ const Hero = () => {
                                     <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Support Available</div>
                                 </div>
                             </div>
-                        </AnimatedSection>
+                        </motion.div>
                     </div>
                 </div>
             </div>
