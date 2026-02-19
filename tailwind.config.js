@@ -6,7 +6,14 @@ export default {
     ],
     darkMode: 'class',
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                heading: ['"Playfair Display"', 'Georgia', 'serif'],
+                display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+                body: ['"Inter"', '"Outfit"', 'system-ui', 'sans-serif'],
+                accent: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            },
+        },
     },
     plugins: [],
 }

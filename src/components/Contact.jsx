@@ -59,15 +59,15 @@ const Contact = () => {
             <div className="w-full mx-auto relative z-10">
                 <AnimatedSection>
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Get in Touch</h2>
-                        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400">Share your project requirements and our team will respond with a tailored solution within 24 hours</p>
+                        <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Get in Touch</h2>
+                        <p className="font-body text-xl md:text-2xl text-slate-600 dark:text-slate-400">Share your project requirements and our team will respond with a tailored solution within 24 hours</p>
                     </div>
                 </AnimatedSection>
 
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
                     <AnimatedSection delay={0.2} className="w-full">
                         <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700">
-                            <h3 className="text-2xl font-bold mb-8 text-slate-900 dark:text-white">Request a Consultation</h3>
+                            <h3 className="font-display text-2xl font-bold mb-8 text-slate-900 dark:text-white">Request a Consultation</h3>
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
@@ -178,7 +178,7 @@ const Contact = () => {
 
                     <AnimatedSection delay={0.4} className="flex flex-col gap-6">
                         <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-700">
-                            <h3 className="text-2xl font-bold mb-8 text-slate-900 dark:text-white">Contact Information</h3>
+                            <h3 className="font-display text-2xl font-bold mb-8 text-slate-900 dark:text-white">Contact Information</h3>
                             <div className="space-y-8">
                                 <div className="flex items-start space-x-6">
                                     <div className="w-12 h-12 bg-cyan-50 dark:bg-cyan-900/20 rounded-2xl flex items-center justify-center text-cyan-600 dark:text-cyan-400 flex-shrink-0">
@@ -215,8 +215,8 @@ const Contact = () => {
 
                         <div className="bg-cyan-600 p-8 rounded-3xl text-white shadow-xl shadow-cyan-500/20 relative overflow-hidden flex-1 flex flex-col justify-center">
                             <div className="relative z-10">
-                                <h3 className="text-2xl font-bold mb-4">Let's Build Something Great</h3>
-                                <p className="mb-6 opacity-90 text-sm leading-relaxed">Receive expert guidance tailored to your specific business objectives, at no cost.</p>
+                                <h3 className="font-accent text-2xl font-bold mb-4">Let's Build Something Great</h3>
+                                <p className="font-body mb-6 opacity-90 text-sm leading-relaxed">Receive expert guidance tailored to your specific business objectives, at no cost.</p>
                                 <div className="space-y-2">
                                     <div className="flex items-center space-x-3">
                                         <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center">

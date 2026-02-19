@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Code, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 import LegalModal, { PrivacyPolicyContent, TermsOfServiceContent } from './LegalModal';
 
@@ -12,11 +13,11 @@ const Footer = () => {
                 <div className="w-full mx-auto px-6 md:px-12 lg:px-48">
                     <div className="flex flex-col md:flex-row justify-between gap-12 mb-16">
                         <div className="max-w-sm">
-                            <a href="#" className="flex items-center space-x-2 mb-6">
+                            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center space-x-2 mb-6">
                                 <img src="/logo.png" alt="DevSolutions Logo" className="w-8 h-8 object-contain" />
-                                <span className="text-xl font-bold tracking-tight text-cyan-600">DevSolutions</span>
-                            </a>
-                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                                <span className="font-display text-xl font-bold tracking-tight text-cyan-600">DevSolutions</span>
+                            </Link>
+                            <p className="font-accent text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
                                 Empowering businesses with intelligent technology solutions that drive efficiency, reduce costs, and accelerate growth.
                             </p>
                             <div className="flex space-x-4">
@@ -33,17 +34,17 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <h4 className="font-bold mb-6 text-lg">Services</h4>
+                            <h4 className="font-display font-bold mb-6 text-lg">Services</h4>
                             <ul className="space-y-4 text-slate-600 dark:text-slate-400">
-                                <li><a href="#services" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Web & App Development</a></li>
-                                <li><a href="#services" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Cloud & DevOps</a></li>
-                                <li><a href="#services" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Cybersecurity</a></li>
-                                <li><a href="#services" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />AI & Machine Learning</a></li>
+                                <li><Link to="/services/web-development" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Web Development</Link></li>
+                                <li><Link to="/services/cloud-devops" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Cloud & DevOps</Link></li>
+                                <li><Link to="/services/cybersecurity" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Cybersecurity</Link></li>
+                                <li><Link to="/services/ai-ml-solutions" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />AI & Machine Learning</Link></li>
                             </ul>
                         </div>
 
                         <div>
-                            <h4 className="font-bold mb-6 text-lg">Company</h4>
+                            <h4 className="font-display font-bold mb-6 text-lg">Company</h4>
                             <ul className="space-y-4 text-slate-600 dark:text-slate-400">
                                 <li><a href="#why-us" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Why Us</a></li>
                                 <li><a href="#technologies" className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center group"><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />Technologies</a></li>
@@ -53,7 +54,7 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <h4 className="font-bold mb-6 text-lg">Contact</h4>
+                            <h4 className="font-display font-bold mb-6 text-lg">Contact</h4>
                             <ul className="space-y-4 text-slate-600 dark:text-slate-400">
                                 <li>Nairobi, Kenya</li>
                                 <li>+254 703 627-369</li>

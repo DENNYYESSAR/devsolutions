@@ -53,7 +53,7 @@ const Hero = () => {
                                         <div className="p-1.5 md:p-2 bg-white/50 dark:bg-slate-700/50 rounded-lg">
                                             {React.cloneElement(card.icon, { className: "w-4 h-4 md:w-6 md:h-6" })}
                                         </div>
-                                        <span className="font-semibold text-xs md:text-base text-slate-900 dark:text-white">{card.label}</span>
+                                        <span className="font-display font-semibold text-xs md:text-base text-slate-900 dark:text-white">{card.label}</span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -82,9 +82,9 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-slate-900 dark:text-white tracking-tight">
+                            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-slate-900 dark:text-white tracking-tight">
                                 Elevate Your <br />
-                                <span className="text-cyan-600">
+                                <span className="font-accent text-cyan-600">
                                     <Typewriter words={["Business Potential", "Competitive Edge", "Growth Strategy", "Digital Transformation"]} />
                                 </span>
                             </h1>
@@ -95,8 +95,8 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed max-w-lg font-medium">
-                                We help businesses streamline operations, reduce costs, and accelerate growth through tailored technology solutions built around your unique objectives.
+                            <p className="font-body text-base md:text-lg text-slate-600 dark:text-slate-300 mb-10 leading-relaxed max-w-lg font-medium">
+                                Streamline operations, reduce costs, and accelerate growth through tailored technology solutions built around your unique objectives.
                             </p>
                         </motion.div>
 
@@ -106,10 +106,10 @@ const Hero = () => {
                             transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
                             <div className="flex flex-row gap-6 md:gap-8">
-                                <a href="#contact" className="group flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 bg-cyan-600 hover:bg-cyan-700 hover:shadow-cyan-500/40 text-white rounded-xl font-bold flex items-center justify-center shadow-lg shadow-cyan-600/20 transition-all duration-300 text-sm md:text-base">
+                                <a href="#contact" className="font-display group flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 bg-cyan-600 hover:bg-cyan-700 hover:shadow-cyan-500/40 text-white rounded-xl font-bold flex items-center justify-center shadow-lg shadow-cyan-600/20 transition-all duration-300 text-sm md:text-base">
                                     Schedule a Consultation
                                 </a>
-                                <a href="#services" className="flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 rounded-xl font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 text-center text-sm md:text-base">
+                                <a href="#services" className="font-display flex-1 sm:flex-none px-4 py-3 md:px-8 md:py-4 rounded-xl font-bold text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 text-center text-sm md:text-base">
                                     Explore Our Services
                                 </a>
                             </div>
@@ -125,19 +125,19 @@ const Hero = () => {
                                     <div className="text-2xl md:text-3xl font-bold text-cyan-600 dark:text-cyan-400">
                                         <Counter value={50} suffix="+" />
                                     </div>
-                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Projects Delivered</div>
+                                    <div className="font-body text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Projects Delivered</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl md:text-3xl font-bold text-cyan-600 dark:text-cyan-400">
+                                    <div className="font-display text-2xl md:text-3xl font-bold text-cyan-600 dark:text-cyan-400">
                                         <Counter value={98} suffix="%" />
                                     </div>
-                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Client Satisfaction</div>
+                                    <div className="font-body text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Client Satisfaction</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-2xl md:text-3xl font-bold text-cyan-600 dark:text-cyan-400">
+                                    <div className="font-display text-2xl md:text-3xl font-bold text-cyan-600 dark:text-cyan-400">
                                         <Counter value={24} suffix="/7" />
                                     </div>
-                                    <div className="text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Support Available</div>
+                                    <div className="font-body text-xs md:text-sm text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap md:whitespace-normal">Support Available</div>
                                 </div>
                             </div>
                         </motion.div>

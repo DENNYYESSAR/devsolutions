@@ -35,8 +35,8 @@ const Testimonials = () => {
             <div className="w-full mx-auto">
                 <AnimatedSection>
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Client Testimonials</h2>
-                        <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                        <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Client Testimonials</h2>
+                        <p className="font-body text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
                             Trusted by industry leaders. Here is what our clients have to say about working with us
                         </p>
                     </div>
@@ -59,7 +59,7 @@ const Testimonials = () => {
                                 </div>
 
                                 {/* Content */}
-                                <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-8 flex-1 relative z-10">
+                                <p className="font-accent text-lg italic text-slate-600 dark:text-slate-300 leading-relaxed mb-8 flex-1 relative z-10">
                                     "{testimonial.content}"
                                 </p>
 
@@ -69,8 +69,8 @@ const Testimonials = () => {
                                         {testimonial.avatar}
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-slate-900 dark:text-white">{testimonial.name}</h4>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400">{testimonial.role}, {testimonial.company}</p>
+                                        <h4 className="font-display font-bold text-slate-900 dark:text-white">{testimonial.name}</h4>
+                                        <p className="font-body text-sm text-slate-500 dark:text-slate-400">{testimonial.role}, {testimonial.company}</p>
                                     </div>
                                 </div>
                             </div>
