@@ -59,13 +59,22 @@ const Navbar = () => {
 
   useEffect(() => {
     const sectionIds = ['contact', 'faq', 'testimonials', 'why-us', 'technologies', 'services'];
+    const visibleSections = new Set();
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (visible.length > 0) {
-          setActiveSection(visible[0].target.id);
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleSections.add(entry.target.id);
+          } else {
+            visibleSections.delete(entry.target.id);
+          }
+        });
+
+        if (visibleSections.size > 0) {
+          const sorted = sectionIds.filter((id) => visibleSections.has(id));
+          setActiveSection(sorted[sorted.length - 1] || '');
+        } else {
+          setActiveSection('');
         }
       },
       { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
@@ -96,7 +105,7 @@ const Navbar = () => {
           <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center space-x-2">
             <img src="/logo.png" alt="DevSolutions Logo" className="w-10 h-10 object-contain" />
             <span className="font-display text-2xl font-bold text-cyan-600">
-              DevSolutions
+              Dev-Solutions
             </span>
           </Link>
 
